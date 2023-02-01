@@ -1,0 +1,24 @@
+server:
+  servlet:
+    context-path: /
+  port: 8082
+spring:
+  application:
+    name: nacos-order
+  cloud:
+    nacos:
+      discovery:
+        ###配置服务发现地址
+        server-addr: 127.0.0.1:8848
+        ###服务集权
+        cluster-name: ORDER-GROUP
+        ###服务命名空间 不同的命名空间无法访问
+        namespace: 8ce9e649-7204-4418-9289-b643989148dd
+    ###流量监控
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8858
+      ## 关闭context收敛，这样被监控的方法可以进行不同链路的配置
+      web-context-unify: false
+      ## 统一限流页面
+      block-page: /block

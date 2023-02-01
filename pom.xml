@@ -10,6 +10,9 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>nacos_config_test</module>
+        <module>nacos-order</module>
+        <module>nacos-stock</module>
+        <module>nacos-stock2</module>
     </modules>
 
     <properties>

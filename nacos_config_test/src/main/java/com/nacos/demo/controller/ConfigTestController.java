@@ -15,8 +15,12 @@ public class ConfigTestController {
     private String name;
     @Value("${user.age:}")
     private String age;
+    @Value("${mysql1.test}")
+    private String mysql;
+    @Value("${crm.test}")
+    private String crm;
     @GetMapping("/test")
     public String getConfig(){
-        return name + ":" + age;
+        return name + ":" + age + ":" + crm + ":" + mysql;
     }
 }

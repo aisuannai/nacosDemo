@@ -1,0 +1,19 @@
+server:
+  servlet:
+    context-path: /
+  port: 8084
+spring:
+  application:
+    name: nacos-stock
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        ###服务集群
+        cluster-name: STOCK-GROUP
+        ###服务命名空间
+        namespace: 8ce9e649-7204-4418-9289-b643989148dd
+    ###流量监控
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8858
